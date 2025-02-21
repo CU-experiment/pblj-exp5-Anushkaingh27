@@ -1,0 +1,26 @@
+# Write a Java program to calculate the sum of a list of integers using autoboxing and unboxing. Include methods to parse strings into their respective wrapper classes (e.g., Integer.parseInt()).
+
+import java.util.*;
+class EasyLevel {
+    public static int sumOfIntegers(List<Integer> numbers) {
+        int sum = 0; 
+        for (Integer num : numbers) {
+            sum += num; 
+        }
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(Integer.valueOf(10));
+        numbers.add(Integer.valueOf(20));
+        numbers.add(30); 
+        
+        System.out.println("Sum: " + sumOfIntegers(numbers));
+
+        
+        String numStr = "50";
+        int parsedNum = Integer.parseInt(numStr);
+        System.out.println("Parsed Integer: " + parsedNum);
+    }
+}
